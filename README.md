@@ -23,3 +23,7 @@ Repository for [Rust tutorial](https://doc.rust-lang.org/book/)
 - [ ] Chapter 18
 - [ ] Chapter 19
 - [ ] Chapter 20
+
+## References
+- https://doc.rust-lang.org/stable/rust-by-example/index.html
+- https://github.com/rust-lang/rustlings/
