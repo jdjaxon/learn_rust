@@ -1,9 +1,9 @@
 use std::io;
 use rand::Rng;
-use std::cmp::Ordering;
+//use std::cmp::Ordering;
 
 fn main() {
-    println!("Guess the number!");
+    println!("Guess the number!\n");
 
     // Generating the secret number.
     // NOTE: gen_range(start..end) is exclusive of the end number.
@@ -23,16 +23,32 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("You guessed {}", guess);
-
-        match guess.cmp(&secret)
+        if guess < secret
         {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
+            println!("{} is too low!", guess);
         }
+        else if guess > secret
+        {
+            println!("{} is too high!", guess);
+        }
+        else
+        {
+            println!("{} is correct! You win!", guess);
+            break;
+        }
+
+        println!();
+
+        // NOTE: another method for comparisons.
+        //
+        //match guess.cmp(&secret)
+        //{
+        //    Ordering::Less => println!("Too small!"),
+        //    Ordering::Greater => println!("Too big!"),
+        //    Ordering::Equal => {
+        //        println!("You win!");
+        //        break;
+        //    }
+        //}
     }
-}
+} /* main */
