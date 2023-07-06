@@ -1,6 +1,6 @@
 # Learning Rust
 
-Repository for "Rust by Example" tutorial.
+Repository for [Rust tutorial](https://doc.rust-lang.org/book/)
 
 ## Current Progress
 - [x] Chapter 1
